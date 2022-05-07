@@ -1,0 +1,309 @@
+.project-page {
+    .text-zone {
+        position: absolute;
+        left: 10%;
+        top: 15%;
+        width: 35%;
+        transform: translateY(-50%);
+        vertical-align: middle;
+        display: table-cell;
+        max-height: 90%;
+
+        h1 {
+            font-size: 53px;
+            font-family: 'Coolvetica';
+            color: #121217;
+            font-weight: 400;
+            margin-top: 0;
+            position: relative;
+            margin-bottom: 40px;
+            left: 10px;
+
+            &::before {
+                content: '<h1>';
+                font-size: 18px;
+                font-family: 'La Belle Aurore';
+                margin-top: -10px;
+                left: -10px;
+                line-height: 18px;
+                opacity: .6;
+                position: absolute;
+            }
+
+            &::after {
+                content: '<h1>';
+                font-size: 18px;
+                font-family: 'La Belle Aurore';
+                line-height: 18px;
+                position: absolute;
+                left: -30px;
+                bottom: -20px;
+                margin-left: 20px;
+                opacity: .6;
+
+            }
+
+
+        }
+
+        p {
+            font-size: 13px;
+            color: #fcffff;
+            font-family: sans-serif;
+            font-weight: 300;
+            min-width: fit-content;
+            animation: pulse 1s;
+
+            &:nth-of-type(1) {
+                animation-delay: 1.1s;
+            }
+
+            &:nth-of-type(2) {
+                animation-delay: 1.2s;
+            }
+
+            &:nth-of-type(3) {
+                animation-delay: 1.3s;
+            }
+
+        }
+
+        .text-animate-hover {
+            &:hover {
+                color: #e4a64e;
+            }
+        }
+
+    }
+
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    [class*="col-"] {
+        float: left;
+
+    }
+
+    @media only screen and (max-width: 768px) {
+
+        /* For tablets: */
+        .col-s-1 {
+            width: 8.33%;
+        }
+
+        .col-s-2 {
+            width: 16.66%;
+        }
+
+        .col-s-3 {
+            width: 25%;
+        }
+
+        .col-s-4 {
+            width: 33.33%;
+        }
+
+        .col-s-5 {
+            width: 41.66%;
+        }
+
+        .col-s-6 {
+            width: 50%;
+        }
+
+        .col-s-7 {
+            width: 58.33%;
+        }
+
+        .col-s-8 {
+            width: 66.66%;
+        }
+
+        .col-s-9 {
+            width: 75%;
+        }
+
+        .col-s-10 {
+            width: 83.33%;
+        }
+
+        .col-s-11 {
+            width: 91.66%;
+        }
+
+        .col-s-12 {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+
+        /* For desktop: */
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+    }
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 5px;
+
+
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #121217;
+
+        border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #35353b;
+    }
+
+    .card {
+        display: flex;
+        justify-content: center;
+    }
+
+    .project-card-wrapper {
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        right: 10px;
+        border-radius: 10px;
+        width: 88%;
+        height: 75%;
+        border: 1px solid #e4a64e;
+        margin: 10px;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        .project-card {
+            height: auto;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            width: 250px;
+            margin: 10px;
+            padding: 5px;
+            background-color: #fcffff;
+            opacity: 0;
+            animation: backInRight 1s 1.2s;
+            animation-fill-mode: forwards;
+
+            img {
+                width: 100%;
+                height: 200px;
+                border-radius: 10px;
+                object-fit: cover;
+                box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px;
+
+            }
+
+            h1 {
+                width: 100%;
+                height: 20px;
+                margin: 0px;
+                font-size: 18px;
+                padding: 3px;
+                display: block;
+                text-align: start;
+                font-weight: 400;
+                font-family: 'Coolvetica';
+                color: #121217;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+
+            p {
+                font-size: 13px;
+                margin: 3px 0px;
+                border: 1px solid #e4a64e;
+                box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px;
+                height: 57px;
+                border-radius: 5px;
+                padding: 3px;
+                color: #121217;
+                font-family: sans-serif;
+                font-weight: 300;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+                overflow: hidden;
+                animation: pulse 1s;
+                animation-delay: 1.1s;
+            }
+
+            a {
+                text-decoration: none;
+                font-size: 14px;
+                color: #121217;
+                cursor: pointer;
+
+                &:hover {
+
+                    color: #e4a64e;
+                    transition: .4s;
+                }
+            }
+        }
+    }
+
+}
